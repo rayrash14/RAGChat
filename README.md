@@ -12,6 +12,18 @@ This project implements a **Retrieval-Augmented Generation (RAG) pipeline** that
 - **Metadata Retrieval**: Retrieve metadata like file name, number of pages, and chunks for each uploaded document.
 - **Dockerized Application**: The application is containerized using Docker for easy deployment on both local and cloud environments.
 - **Testing**: Comprehensive unit and integration tests for document retrieval and query handling.
+- **Postman Collection**: A Postman collection is provided for easy testing and interaction with the application's API endpoints.
+
+---
+
+## 🧱 Tech Stack
+- **FastAPI** for REST API
+- **FAISS** for vector similarity search
+- **LangChain** for chaining embedding + LLM
+- **Hugging Face** (Mistral-7B) via hosted API
+- **SQLite** for document metadata storage
+- **Docker** for containerization
+- **GCP Cloud Run** for deployment
 
 ---
 
@@ -38,24 +50,14 @@ This project implements a **Retrieval-Augmented Generation (RAG) pipeline** that
 
 ### Steps to Run the Application Locally
 
+
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/yourusername/chatbot-rag.git
     cd chatbot-rag
     ```
 
-2. **Create a virtual environment (Optional)**:
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows: `venv\Scripts\activate`
-    ```
-
-3. **Install the required dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **Set up environment variables**:
+2. **Set up environment variables**:
     Create a `.env` file in the root directory with the following content:
     ```env
     HF_TOKEN=your_hugging_face_token
@@ -63,18 +65,22 @@ This project implements a **Retrieval-Augmented Generation (RAG) pipeline** that
     SQLITE_DB_PATH=path_to_your_db
     ```
 
-  - ***SQLITE_DB_PATH:*** The path to the SQLite database file.
+  - **SQLITE_DB_PATH:** The path to the SQLite database file.
 
     - By default, this is set to `app/db/metadata.db`, meaning the database will be stored inside the `app/db/` directory in the project.
   
     - If you'd like to store the database in a different location, update this path to reflect your desired directory (e.g., `/path/to/database/metadata.db`).
 
-5. **Run the FastAPI application locally**:
+3. **Build & Run Locally (Docker)**:
+    ```bash
+    docker-compose up --build
+    ```   
+
+4. **Visit Swagger UI**:
     ```bash
     uvicorn app.main:app --reload
     ```
-
-    The application will be available at `http://127.0.0.1:8000`.
+    Open: [http://localhost:8000/docs](http://localhost:8000/docs) to test the API via Swagger UI.
 
 ---
 
