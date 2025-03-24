@@ -63,7 +63,7 @@ This project implements a **Retrieval-Augmented Generation (RAG) pipeline** that
     SQLITE_DB_PATH=path_to_your_db
     ```
 
-  - **SQLITE_DB_PATH:** The path to the SQLite database file.
+  - ***SQLITE_DB_PATH:*** The path to the SQLite database file.
 
     - By default, this is set to `app/db/metadata.db`, meaning the database will be stored inside the `app/db/` directory in the project.
   
