@@ -112,7 +112,7 @@ This project implements a **Retrieval-Augmented Generation (RAG) pipeline** that
     docker-compose up
     ```
 
-    The FastAPI application will be accessible via Swagger UI at: Swagger UI: http://localhost:8000/docs
+    The FastAPI application will be accessible via Swagger UI at Swagger UI: http://localhost:8000/docs
 
 ---
 
@@ -143,8 +143,7 @@ The project includes unit and integration tests for document upload, query handl
 3. **Metadata Retrieval**:
     - Returns a list of uploaded document metadata.
 
-4. **Edge Case for Empty PDF**:
-    - Tests for uploading a blank or 0-page PDF.
+
 
 ---
 
