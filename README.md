@@ -63,6 +63,12 @@ This project implements a **Retrieval-Augmented Generation (RAG) pipeline** that
     SQLITE_DB_PATH=path_to_your_db
     ```
 
+  - **SQLITE_DB_PATH:** The path to the SQLite database file.
+
+    - By default, this is set to `app/db/metadata.db`, meaning the database will be stored inside the `app/db/` directory in the project.
+  
+    - If you'd like to store the database in a different location, update this path to reflect your desired directory (e.g., `/path/to/database/metadata.db`).
+
 5. **Run the FastAPI application locally**:
     ```bash
     uvicorn app.main:app --reload
