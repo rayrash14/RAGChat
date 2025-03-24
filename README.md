@@ -23,7 +23,7 @@ This project implements a **Retrieval-Augmented Generation (RAG) pipeline** that
 - **Hugging Face** (Mistral-7B) via hosted API
 - **SQLite** for document metadata storage
 - **Docker** for containerization
-- **GCP Cloud Run** for deployment
+
 
 ---
 
@@ -53,8 +53,8 @@ This project implements a **Retrieval-Augmented Generation (RAG) pipeline** that
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/chatbot-rag.git
-    cd chatbot-rag
+    git clone https://github.com/yourusername/RAGChat.git
+    cd RAGChat
     ```
 
 2. **Set up environment variables**:
@@ -77,9 +77,7 @@ This project implements a **Retrieval-Augmented Generation (RAG) pipeline** that
     ```   
 
 4. **Visit Swagger UI**:
-    ```bash
-    uvicorn app.main:app --reload
-    ```
+    
     Open: [http://localhost:8000/docs](http://localhost:8000/docs) to test the API via Swagger UI.
 
 ---
