@@ -1,0 +1,29 @@
+# Python related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+*.log
+
+# Virtual environment
+.env/
+venv/
+*.env
+
+# Docker related
+.docker/
+docker-compose.override.yml
+
+# VS Code settings
+.vscode/
+
+# MacOS
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
